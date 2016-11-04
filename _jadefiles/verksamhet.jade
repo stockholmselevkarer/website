@@ -31,7 +31,7 @@
           {% assign posts = site.posts | where: "type", "stadga" %}
           ul.list-unstyled            
             {% for posts in posts %}
-            li: a(href="../uploads/{{posts.file-name}}") {{posts.title}}
+            li: a(href="uploads/{{posts.file-name}}") {{posts.title}}
             {% endfor %}
             
       .side-section
@@ -43,7 +43,7 @@
           {% assign items = group.items %}
           ul.list-unstyled
             {% for item in items%}
-            li: a(href="../uploads/{{item.file-name}}") {{item.title}}
+            li: a(href="uploads/{{item.file-name}}") {{item.title}}
             {% endfor %}
           {% endfor %}
             
@@ -53,5 +53,5 @@
       .side-section
         h4.side-section-title Medlemslista
         .side-section-content 
-          a(href="../medlemmar/") Här 
+          a(href="medlemmar/") Här 
           |kan du hitta alla våra medlemskårer
