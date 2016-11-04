@@ -1,0 +1,117 @@
+.intro-text-big-container
+  height: 100%
+  width: 100%
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+  text-align: center
+  background: rgba(0, 0, 0, 0.6)
+  color: white
+
+  h1
+    color: white
+    padding: 0
+    margin: 0
+    text-transform: uppercase
+    font-family: 'Lato'
+    font-size: 62px
+  p
+    padding: 0 0 12px 0
+    margin: 0
+
+    font-size: 20px
+
+
+
+  .buttons
+    display: flex
+    flex-direction: row
+    justify-content: center
+    min-height: 40px
+    line-height: 40px
+    text-align: center
+
+    .button
+
+      width: 150px
+      margin: 0 10px
+      font-family: 'Open Sans'
+      transition: 0.2s ease-in-out
+      cursor: pointer
+      font-size: 15px
+      letter-spacing: 1px
+      font-weight: 600
+      vertical-align: middle
+      padding: 0
+
+      border:
+        width: 2px
+        style: solid
+        color: white
+
+      &:hover
+        background-color: white
+        a
+          color: black
+      a
+        text-decoration: none
+        color: white
+
+.my-btn
+  text-decoration: none
+  padding: 10px 18px
+  margin: 0 10px
+  font-family: 'Open Sans'
+  transition: 0.2s ease-in-out
+  cursor: pointer
+  font-size: 15px
+  letter-spacing: 1px
+  font-weight: 600
+  vertical-align: middle
+
+
+  border:
+    width: 2px
+    style: solid
+    color: black
+
+  &:hover
+    text-decoration: none
+    background-color: black
+    color: white
+
+
+
+
+.last-section
+  padding: 50px 0
+
+.col-md-4
+  padding-top: 50px
+  padding-bottom: 50px
+
+.center-button
+  text-align: center
+  padding-top: 10px
+
+.center
+  text-align: center
+
+@media (max-width: 870px)
+  .intro-text-big-container
+    h1
+      font-size: 54px
+
+
+@media (max-width: 460px)
+  .intro-text-big-container
+    p
+      font-size: 18px
+    h1
+      font-size: 42px
+    .buttons
+      display: inline-block
+
+      .button
+        margin-bottom: 10px

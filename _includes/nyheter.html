@@ -1,0 +1,2 @@
+<div class="container"><div class="row"><div style="padding: 30px 15px" class="col-md-12">{% assign posts = site.posts | where: "type", "post" %}
+{% for posts in posts %}<div class="post"><h3>{{posts.title}}</h3><h5>Posted on {{posts.date | date: '%B %d, %Y' }}</h5>{{posts.content}}</div>{% endfor %}</div></div></div>

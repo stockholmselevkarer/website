@@ -1,0 +1,22 @@
+mixin nav-content()
+  ul
+    li: a(href="/nyheter/") NYHETER
+    li: a(href="/verksamhet/") VERKSAMHET
+    li: a(href="/podcast/") PODCAST
+    li: a(href="/om-oss/") OM OSS
+    li(style="padding-right: 0"): a(href="/kontakt/") KONTAKT
+
+
+.wrapper
+  nav.navbar-light
+    a(href="/")
+      .navbar-header STOCKHOLMS ELEVKÅRER
+    .navbar-mobile-toggle
+      span
+    .nav-items
+      +nav-content()
+    
+    .navbar-mobile
+      .nav-items-mobile
+        +nav-content()
+  

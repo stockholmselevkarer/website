@@ -1,0 +1,57 @@
+.container.verksamhet
+  .row
+    .col-sm-9
+      h3 Organisationen
+      p Stockholms Elevkårer är en distriktsorganisation som består av 23 000 medlemmar anslutna till 66 medlemsorganisationer. Organisationen verkar som en opinionsbildare och är även en knutpunkt för elevkårsengagerade i Stockholm.
+      h3 Styrelsen verksamhetsåret 2016/2017
+      p
+        |Ordförande – Amalia Berglöf – 
+        a(href="mailto:amalia.berglof@stockholmselevkarer.se") amalia.berglof@stockholmselevkarer.se
+        br
+        |Vice ordförande – Ludvig Lundgren – 
+        a(href="mailto:ludvig.lundgren@stockholmselevkarer.se") ludvig.lundgren@stockholmselevkarer.se
+        br
+        |Ledamot – Wilma Westerberg – 
+        a(href="mailto:wilma.westerberg@stockholmselevkarer.se") wilma.westerberg@stockholmselevkarer.se
+        br
+        |Ledamot – Smilla Ubbe – 
+        a(href="mailto:smilla.ubbe@stockholmselevkarer.se") smilla.ubbe@stockholmselevkarer.se
+        br
+        |Ledamot – Filip Hong – 
+        a(href="mailto:filip.hong@stockholmselevkarer.se") filip.hong@stockholmselevkarer.se
+        br
+        |Ledamot – Adrian Salamon – 
+        a(href="mailto:adrian.salamon@stockholmselevkarer.se") adrian.salamon@stockholmselevkarer.se
+
+
+    .col-sm-3.offset-sm-1
+      .side-section
+        h4.side-section-title Stadgar
+        .side-section-content Här kan du hitta föreningens stadga
+          {% assign posts = site.posts | where: "type", "stadga" %}
+          ul.list-unstyled            
+            {% for posts in posts %}
+            li: a(href="../uploads/{{posts.file-name}}") {{posts.title}}
+            {% endfor %}
+            
+      .side-section
+        h4.side-section-title Protokoll
+        .side-section-content Här kan du hitta alla officiella styrelseprotokoll
+          {% assign itmes_grouped = site.posts | where: "type", "protokoll" | group_by:"year" %}
+          {% for group in itmes_grouped %}
+          h5.side-section-subtitle {{group.name}}
+          {% assign items = group.items %}
+          ul.list-unstyled
+            {% for item in items%}
+            li: a(href="../uploads/{{item.file-name}}") {{item.title}}
+            {% endfor %}
+          {% endfor %}
+            
+            
+            
+  
+      .side-section
+        h4.side-section-title Medlemslista
+        .side-section-content 
+          a(href="../medlemmar/") Här 
+          |kan du hitta alla våra medlemskårer

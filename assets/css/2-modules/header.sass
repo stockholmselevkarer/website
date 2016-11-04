@@ -1,0 +1,150 @@
+.wrapper
+  a
+    text-decoration: none
+  width: 100%
+  height: 70px
+  line-height: 70px
+  background-color: rgb(209, 209, 209)
+  font:
+    size: 18px
+
+
+  .navbar-light
+
+    max-width: 1170px
+    height: 70px
+    margin: 0 auto
+    padding: 0 15px
+
+  .navbar-header
+
+    float: left
+    font:
+      family: 'Lato'
+      size: 24px
+      weight: 700
+    letter-spacing: 0.5px
+
+  .nav-items
+
+
+    float: right
+    height: 100%
+    top: 0
+
+    ul
+      list-style-type: none
+
+
+      margin: 0
+      padding: 0
+
+
+    li
+      display: inline-block
+      padding: 0 10px
+
+
+
+  .navbar-mobile
+    visibility: hidden
+    background-color: rgb(209, 209, 209)
+    padding-left: 20px
+    position: absolute
+    top: 60px
+    bottom: 0
+    right: 0
+    left: 0
+    padding-top: 10px
+    transition: all 0.2s ease-in-out
+    opacity: 0
+    text-align: left
+    font-size: 20px
+    z-index: 999
+    ul
+      list-style-type: none
+      margin: 0
+      padding: 0
+    li
+      height: 40px
+      line-height: 40px
+
+.stop-scrolling
+  height: 100%
+  overflow: hidden
+
+.navbar-mobile-toggle
+  display: none
+  float: right
+  height: 26px
+  width: 26px
+  margin-top: 22px
+
+
+  cursor: pointer
+
+  &:selection
+    background: transparent
+
+
+  span,
+  span:before,
+  span:after
+    content: ""
+    display: block
+    height: 3px
+    width: 26px
+    background: #333
+    position: absolute
+    transition: all 0.3s ease-in-out
+    top: 33px
+
+  span:before
+    top: -8px
+
+  span:after
+    top: 8px
+
+
+
+
+  &.nav-open span
+    background: transparent
+
+  &.nav-open span:before,
+  &.nav-open span:after
+    transform-origin: center
+    transform: rotate(-45deg)
+    top: 0
+
+
+  &.nav-open span:before
+
+    transform: rotate(45deg)
+
+
+.current
+  color: #000
+  font-weight: bold
+
+
+
+.parallax-window
+  height: 600px
+  background: transparent
+
+
+
+@media (max-width: 870px)
+  .navbar-light
+    .navbar-header
+      font-size: 18px
+      letter-spacing: 0
+
+  .navbar-mobile-toggle
+    display: block
+  .nav-items
+    display: none
+  .navbar-mobile.nav-open
+    visibility: visible
+    opacity: 1

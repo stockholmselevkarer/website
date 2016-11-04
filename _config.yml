@@ -1,0 +1,4 @@
+name: Adrian Salamon
+markdown: kramdown
+highlighter: null # or rouge or null
+exclude: ["node_modules", "gulpfile.js", "package.json"]

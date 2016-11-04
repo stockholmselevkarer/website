@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-md-12(style="padding: 30px 15px")
+      {% assign posts = site.posts | where: "type", "post" %}
+      {% for posts in posts %}
+      .post
+        h3 {{posts.title}}
+        h5 Posted on {{posts.date | date: '%B %d, %Y' }}
+        {{posts.content}}
+
+      {% endfor %}
